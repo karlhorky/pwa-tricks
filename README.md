@@ -32,7 +32,9 @@ document.head
   );
 ```
 
-Once you have done this, you can create the desktop app as normal:
+Once you have done this, you can install the PWA as normal.
+
+Or, if you need to create a shortcut for a pseudo-PWA:
 
 6. Click on the three dots menu > More Tools > Create Shortcut<br /><br />
    <img src="chrome-pseudo-pwa-create-shortcut.png" alt="" /><br /><br />
