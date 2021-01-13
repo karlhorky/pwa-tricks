@@ -34,9 +34,9 @@ document.head
 
 Once you have done this, you can create the desktop app as normal:
 
-6. Click on the three dots menu > More Tools > Create Shortcut
+6. Click on the three dots menu > More Tools > Create Shortcut<br /><br />
    <img src="chrome-pseudo-pwa-create-shortcut.png" alt="" /><br /><br />
-7. Check "Open as window" and select "Create"
+7. Check "Open as window" and select "Create"<br /><br />
    <img src="chrome-pseudo-pwa-create-shortcut-window.png" alt="" /><br /><br />
 
 ## Solution 2: Edit an Existing Web App Manifest
@@ -50,15 +50,15 @@ Refused to load manifest from 'data:application/manifest+json,...' because it vi
 To get around this, you can use [Chrome Local Overrides](https://developers.google.com/web/updates/2018/01/devtools#overrides) to modify the `start_url` in the Web App Manifest:
 
 1. On the page of the application, open the Chrome DevTools (right click anywhere on the page and select "Inspect")
-2. Locate and expand the `<head>` element and find the `link` element with `rel="manifest"`. Note the file path in `href`.
+2. Locate and expand the `<head>` element and find the `link` element with `rel="manifest"`. Note the file path in `href`.<br /><br />
    <img src="inspect-head-link-manifest.png" alt="" /><br /><br />
 3. Open the `Sources` tab in the DevTools. If you have not used overrides before, you will need to set them up:
    - Switch to the `Overrides` 2nd-level tab (you may need to find it in the `»` menu)
    - If you Create a new folder in your `projects` or `Documents` folder called `chrome-overrides`
-   - Click on `＋ Select folder for overrides` and select the folder you created. Confirm any prompts at the top of the browser asking for access to the folder.
+   - Click on `＋ Select folder for overrides` and select the folder you created. Confirm any prompts at the top of the browser asking for access to the folder.<br /><br />
      <img src="chrome-devtools-overrides-select-folder.png" alt="" /><br /><br />
      <img src="chrome-overrides-access.png" alt="" /><br /><br />
-4. Refresh the page to make sure all sources load. Locate the web app manifest corresponding to the file path you noted earlier. Right click and select `Save for overrides`:
+4. Refresh the page to make sure all sources load. Locate the web app manifest corresponding to the file path you noted earlier. Right click and select `Save for overrides`:<br /><br />
    <img src="chrome-manifest-save-for-overrides.png" alt="" /><br /><br />
 5. Now the web app manifest is editable! Make your changes to `start_url` or anything else that you need, save the file and reload the page
 6. The updated web app manifest has now been loaded, and you can install or create a shortcut to the PWA as normal 🙌
