@@ -1,1 +1,1 @@
-# pwa-tricks
+# PWA Tricks
