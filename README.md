@@ -57,8 +57,9 @@ To get around this, you can use [Chrome Local Overrides](https://developers.goog
 3. Open the `Sources` tab in the DevTools. If you have not used overrides before, you will need to set them up:
    - Switch to the `Overrides` 2nd-level tab (you may need to find it in the `»` menu)
    - If you Create a new folder in your `projects` or `Documents` folder called `chrome-overrides`
-   - Click on `＋ Select folder for overrides` and select the folder you created. Confirm any prompts at the top of the browser asking for access to the folder.<br /><br />
+   - Click on `＋ Select folder for overrides` and select the folder you created<br /><br />
      <img src="chrome-devtools-overrides-select-folder.png" alt="" /><br /><br />
+   - Confirm any prompts at the top of the browser asking for access to the folder<br /><br />
      <img src="chrome-overrides-access.png" alt="" /><br /><br />
 4. Refresh the page to make sure all sources load. Locate the web app manifest corresponding to the file path you noted earlier. Right click and select `Save for overrides`:<br /><br />
    <img src="chrome-manifest-save-for-overrides.png" alt="" /><br /><br />
