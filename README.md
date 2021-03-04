@@ -51,7 +51,7 @@ Refused to load manifest from 'data:application/manifest+json,...' because it vi
 
 To get around this, you can use [Chrome Local Overrides](https://developers.google.com/web/updates/2018/01/devtools#overrides) to modify the `start_url` in the Web App Manifest, as in the guides below.
 
-Both of these guides require Local Overrides to be set up, like this:
+Both of the options for this below require Local Overrides to be set up, so do this first:
 
 1. Open the `Sources` tab in the Chrome DevTools. If you have not used overrides before, you will need to set them up:
    - Switch to the `Overrides` 2nd-level tab (you may need to find it in the `»` menu)
