@@ -78,11 +78,11 @@ If there is an existing manifest on the page (`document.querySelectorAll('link[r
 
 If there isn't yet a manifest on the page (`document.querySelectorAll('link[rel="manifest"]').length` returns `0`), then you can add one like this:
 
-1. Locate and expand the `<head>` element under Elements in the Chrome DevTools. Right click on the `<head>` element and select `Edit as HTML`. Copy and paste the following code inside the head tag, at the beginning (before all other elements):
+1. Locate and expand the `<head>` element under Elements in the Chrome DevTools. Right click on the `<head>` element and select `Edit as HTML`. Copy and paste the following code inside the head tag, at the beginning (before all other elements):<br /><br />
    ```
    <link rel="manifest" href="/manifest-temp-pwa-tricks-0123456789.json" />
    ```
-   <br /><br />
+   <br />
 2. This will trigger a network request to that file. Go to the Network tab, locate the request entry, right-click on it and select `Save for overrides`
 3. Now the web app manifest is editable! Make your changes to `start_url` or anything else that you need and save the file.
 4. Reload the page and do step 1 again - edit the `<head>` and add the `link` to the newly-created manifest
