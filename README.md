@@ -62,7 +62,7 @@ Both of these guides require Local Overrides to be set up, like this:
      <img src="chrome-overrides-access.png" alt="" /><br /><br />
 2. Refresh the page.
 
-### With an Existing Manifest `link`
+### With an Existing Manifest
 
 If there is an existing manifest on the page (`document.querySelectorAll('link[rel="manifest"]').length` returns `1`), then you can modify it like this:
 
@@ -74,7 +74,7 @@ If there is an existing manifest on the page (`document.querySelectorAll('link[r
 4. The updated web app manifest has now been loaded, and you can install or create a shortcut to the PWA as normal 🙌
 5. You can now remove the overrides (right click on the folder with the domain name -> Delete all overrides)
 
-### Without a Manifest `link`
+### Without a Manifest
 
 If there isn't yet a manifest on the page (`document.querySelectorAll('link[rel="manifest"]').length` returns `0`), then you can add one like this:
 
