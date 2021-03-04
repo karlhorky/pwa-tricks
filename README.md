@@ -12,7 +12,7 @@ Sometimes PWAs don't behave in an ideal manner, such as in the following cases:
 
 In these cases it can be helpful to change the `start_url` in the [web app manifest](https://www.w3.org/TR/appmanifest/) for the PWA.
 
-### Solution 1: Add a Web App Manifest
+### Solution 1: Add an Inline Web App Manifest
 
 Before you install or create the shortcut for the PWA, add a web app manifest with your chosen `start_url` to the page:
 
@@ -41,9 +41,9 @@ Or, if you need to create a shortcut for a pseudo-PWA:
 7. Check "Open as window" and select "Create"<br /><br />
    <img src="chrome-pseudo-pwa-create-shortcut-window.png" alt="" /><br /><br />
 
-## Solution 2: Edit an Existing Web App Manifest
+## Solution 2: Add or Edit a Web App Manifest with Local Overrides
 
-If the page either specifies a manifest already or sets the Content Security Policy directive `manifest-src`, then the above solution may not work, potentially also returning an error such as:
+Inline web app manifests may not work - either if the page already specifies a manifest or if the Content Security Policy directive `manifest-src` has been set - potentially also returning an error like this:
 
 ```
 Refused to load manifest from 'data:application/manifest+json,...' because it violates the following Content Security Policy directive: "manifest-src 'self'".
