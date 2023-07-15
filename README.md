@@ -26,7 +26,7 @@ Before you install or create the shortcut for the PWA, add a web app manifest wi
 const startUrl = 'https://calendar.google.com/calendar/u/1/r';
 
 const unsanitizedHtmlPolicy = trustedTypes.createPolicy('unsanitizedHtml', {
-  createHTML: (string) => string,
+  createHTML: (htmlString) => htmlString,
 });
 
 document.head
