@@ -24,11 +24,18 @@ Before you install or create the shortcut for the PWA, add a web app manifest wi
 
 ```js
 const startUrl = 'https://calendar.google.com/calendar/u/1/r';
+
+const unsanitizedHtmlPolicy = trustedTypes.createPolicy('unsanitizedHtml', {
+  createHTML: (string) => string,
+});
+
 document.head
   .querySelector(':first-child')
   .insertAdjacentHTML(
     'beforebegin',
-    `<link rel="manifest" href='data:application/manifest+json,{"start_url":"${startUrl}"}' />`,
+    unsanitizedHtmlPolicy.createHTML(
+      `<link rel="manifest" href='data:application/manifest+json,{"start_url":"${startUrl}"}' />`,
+    ),
   );
 ```
 
