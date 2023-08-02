@@ -60,7 +60,7 @@ To get around this, two additional options:
 
 #### A) Manually Edit HTML
 
-Switch to the **Elements** tab of the Chrome DevTools and manually edit the HTML to match the manifest in the JavaScript above
+Switch to the **Elements** tab of the Chrome DevTools and manually edit the HTML to match the manifest in the JavaScript in **Solution 1** above
 
 #### B) Chrome Local Overrides
 
