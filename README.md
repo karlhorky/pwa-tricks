@@ -48,15 +48,23 @@ Or, if you need to create a shortcut for a pseudo-PWA:
 7. Check "Open as window" and select "Create"<br /><br />
    <img src="chrome-pseudo-pwa-create-shortcut-window.png" alt="" /><br /><br />
 
-## Solution 2: Add or Edit a Web App Manifest with Local Overrides
+### Solution 2: Editing Existing Manifest, Security Restriction Workarounds
 
-Inline web app manifests may not work - either if the page already specifies a manifest or if the Content Security Policy directive `manifest-src` has been set - potentially also returning an error like this:
+Inline web app manifests may not work - either if the page already specifies a manifest or if the Content Security Policy directive `manifest-src` or `trusted-types` has been set - potentially also returning an error like this:
 
 ```
 Refused to load manifest from 'data:application/manifest+json,...' because it violates the following Content Security Policy directive: "manifest-src 'self'".
 ```
 
-To get around this, you can use [Chrome Local Overrides](https://developers.google.com/web/updates/2018/01/devtools#overrides) to modify the `start_url` in the Web App Manifest, as in the guides below.
+To get around this, two additional options:
+
+#### A) Manually Edit HTML
+
+Switch to the **Elements** tab of the Chrome DevTools and manually edit the HTML to match the manifest in the JavaScript above
+
+#### B) Chrome Local Overrides
+
+Use [Chrome Local Overrides](https://developers.google.com/web/updates/2018/01/devtools#overrides) to modify the `start_url` in the Web App Manifest, as in the guides below.
 
 Both of the options for this below require Local Overrides to be set up, so do this first:
 
@@ -69,7 +77,7 @@ Both of the options for this below require Local Overrides to be set up, so do t
      <img src="chrome-overrides-access.png" alt="" /><br /><br />
 2. Refresh the page.
 
-### With an Existing Manifest
+##### With an Existing Manifest
 
 If there is an existing manifest on the page (`document.querySelectorAll('link[rel="manifest"]').length` returns `1`), then you can modify it like this:
 
@@ -81,7 +89,7 @@ If there is an existing manifest on the page (`document.querySelectorAll('link[r
 4. The updated web app manifest has now been loaded, and you can install or create a shortcut to the PWA as normal 🙌
 5. You can now remove the overrides (right click on the folder with the domain name -> Delete all overrides)
 
-### Without a Manifest
+##### Without a Manifest
 
 If there isn't yet a manifest on the page (`document.querySelectorAll('link[rel="manifest"]').length` returns `0`), then you can add one like this:
 
