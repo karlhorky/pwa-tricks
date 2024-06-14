@@ -1,6 +1,6 @@
 # PWA Tricks
 
-A collection of helpful tricks for PWAs (Progressive Web Apps) and [Chrome Pseudo-PWA](#chrome-pseudo-pwas)
+A collection of useful tricks for PWAs (Progressive Web Apps) and [Chrome Pseudo-PWA](#chrome-pseudo-pwas)
 
 ## Change Starting URL of PWA in Chrome
 
