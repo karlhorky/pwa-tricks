@@ -8,7 +8,7 @@ Sometimes PWAs don't behave in an ideal manner, such as in the following cases:
 
 - [Google Calendar doesn't allow for multiple Pseudo-PWA shortcuts to different accounts](https://apple.stackexchange.com/questions/390799/how-to-change-the-url-of-a-chrome-app-shortcut)
 - LinkedIn Messaging will [show an ugly black bar](./linkedin-messaging-black-bar.png) if you navigate to another message
-- Some PWAs may not start on the correct URL
+- Some PWAs may not start on the correct URL (eg. starting YouTube with the Upload dialog open, using `https://studio.youtube.com/channel/<channel ID>?d=ud`)
 
 In these cases it can be helpful to change the `start_url` in the [web app manifest](https://www.w3.org/TR/appmanifest/) for the PWA.
 
